@@ -1,21 +1,21 @@
 
-<br>
-<br>
-<br>
+<div class="banner-contact">
+  <div class="banner-content">
+    <div class="form-contact-md text-center">
+      <%= form_for @message, url: create_message_url do |f| %>
+        <%= notice %>
+        <%= @message.errors.full_messages.join(', ') %>
 
-<div class="form-contact-md text-center">
-  <%= form_for @message, url: create_message_url do |f| %>
-    <%= notice %>
-    <%= @message.errors.full_messages.join(', ') %>
-
-    <div class="form-inputs">
-      <%= f.text_field :name, required: true, placeholder: 'Your name' %>
-      <%= f.email_field :email, required: true, placeholder: 'Your email' %>
-      <%= f.text_field :company, placeholder: 'Your company' %>
-      <%= f.text_area :body, required: true, placeholder: 'Your Message' %>
-      <%= f.submit 'Send' %>
+        <div class="form-inputs">
+          <%= f.text_field :name, required: true, placeholder: 'Your name' %>
+          <%= f.email_field :email, required: true, placeholder: 'Your email' %>
+          <%= f.text_field :company, placeholder: 'Your company' %>
+          <%= f.text_area :body, required: true, placeholder: 'Your Message' %>
+          <%= f.submit 'Send' %>
+        </div>
+      <% end %>
     </div>
-
-  <% end %>
+  </div>
 </div>
+
 
