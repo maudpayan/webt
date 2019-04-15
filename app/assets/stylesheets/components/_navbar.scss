@@ -1,6 +1,10 @@
+.navbar {
+  position: fixed !important;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: grey;
+  background: transparent;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,3 +16,10 @@
   width: 249px;
 }
 
+.navbar-light .navbar-nav .nav-link {
+  color: $white !important;
+}
+
+.navbar-nav li {
+  padding-right: 15px;
+}
