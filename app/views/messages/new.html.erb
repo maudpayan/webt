@@ -1,46 +1,80 @@
 <div class="banner-contact">
-  <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+  <!-- <div class="row justify-content-center"> -->
+   <div class="col-xs-12 col-sm-4 col-sm-offset-4" style="background-color: rgba(0,0,0,0.6); opacity: 0,5; border-radius: 4px; padding: 20px; padding-bottom: 30px">
+      <form action="#">
+        <h2 class="text-center mb-5">Keep in touch</h2>
+        <div class="form-row">
+          <div class="col-6 form-group">
+            <label for="first-name">First name</label>
+            <input type="text" class="form-control" id="first-name" placeholder="*">
+          </div>
+          <div class="col-6 form-group">
+            <label for="last-name" style="text-align:left">Last name</label>
+            <input type="text" class="form-control" id="last-name" placeholder="*">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="*">
+        </div>
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" class="form-control" id="company">
+        </div>
+        <div class="form-group">
+          <label for="body">Message</label>
+          <input type="text" class="form-control" id="body" placeholder="*">
+        </div>
 
-        <%= form_for @message, url: create_message_url do |f| %>
-            <%= notice %>
-            <%= @message.errors.full_messages.join(', ') %>
-            <h2>Keep in touch</h2>
-
-            <div class="form-inputs">
-              <div class="form-group">
-                <%= f.label :name, 'Name' %>
-                <%= f.text_field :name, required: true, placeholder: '', style:"width: 100%" %>
-              </div>
-              <div class="form-group">
-                <%= f.label :email, 'Email' %>
-                <%= f.email_field :email, required: true, placeholder: '', style:"width: 100%" %>
-              </div>
-              <div class="form-group">
-                <%= f.label :company, 'Company' %>
-                <%= f.text_field :company, placeholder: '', style:"width: 100%" %>
-              </div>
-              <div class="form-group">
-                <%= f.label :body, 'Message' %>
-                <%= f.text_area :body, required: true, placeholder: '...', style:"width: 100%" %>
-                <br>
-                <%= f.submit 'Send', class: "btn btn-primary" %>
-              </div>
-            </div>
-          <% end %>
-
-
-  </div>
+        <input type="submit" value="Send your message" class="btn btn-medium btn-lg w-50" style="background-color:#01CBB1; border-radius: 50px; color:white">
+      </form>
+    </div>
+<!--   </div> -->
 </div>
 
+ùm
+
+
+
+<!-- <div class="banner-contact">
+  <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+
+    <%#= form_for @message, url: create_message_url do |f| %>
+      <%#= notice %>
+      <%#= @message.errors.full_messages.join(', ') %>
+      <h2>Keep in touch</h2>
+      <div class="form-inputs">
+        <div class="form-group">
+          <%##= f.text_field :name, required: true, placeholder: '', style:"width: 100%" %>
+        </div>
+        <div class="form-group">
+          <%#= f.label :email, 'Email' %>
+          <%#= f.email_field :email, required: true, placeholder: '', style:"width: 100%" %>
+        </div>
+        <div class="form-group">
+          <%#= f.label :company, 'Company' %>
+          <%#= f.text_field :company, placeholder: '', style:"width: 100%; border-radius: 5px" %>
+        </div>
+        <div class="form-group">
+          <%#= f.label :body, 'Message' %>
+          <%#= f.text_area :body, required: true, placeholder: '...', style:"width: 100%" %>
+          <br>
+          <%#= f.submit 'Send', class: "btn btn-primary" %>
+        </div>
+      </div>
+    <%# end %>
+  </div>
+</div> -->
 
 
 
 
 
 
-<div class="container pt-5">
+
+<!-- <div class="container pt-5">
       <div class="row justify-content-center">
-        <div class="col-12 col-md-6 col-lg-5" style="background-color: white; border-radius: 4px; padding: 10px; padding-bottom: 30px; margin-top: -10px">
+        <div class="col-12 col-md-6 col-lg-5" style="background-color: white; border-radius: 4px; padding: 10px; padding-bottom: 30px; margin-top: -700px">
           <form action="#">
             <h2 class="text-center mb-5">Keep in touch</h2>
             <div class="form-row">
@@ -70,42 +104,6 @@
           </form>
         </div>
       </div>
-    </div>
-
-
-
-<!-- <div class="banner-contact">
-    <div class="container pt-5">
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-6 col-lg-4 contact-rectangular">
-          <%#= form_for @message, url: create_message_url do |f| %>
-            <%#= notice %>
-            <%#= @message.errors.full_messages.join(', ') %>
-            <h2 class="text-center mb-5">Keep in touch</h2>
-
-            <div class="form-inputs">
-              <div class="form-group">
-                <%#= f.label :name, 'Name' %>
-                <%#= f.text_field :name, required: true, placeholder: '' %>
-              </div>
-              <div class="form-group">
-                <%#= f.label :email, 'Email' %>
-                <%#= f.email_field :email, required: true, placeholder: '' %>
-              </div>
-              <div class="form-group">
-                <%#= f.label :company, 'Company' %>
-                <%#= f.text_field :company, placeholder: '' %>
-              </div>
-              <div class="form-group">
-                <%#= f.label :body, 'Message' %>
-                <%#= f.text_area :body, required: true, placeholder: '...' %>
-                <%#= f.submit 'Send' %>
-              </div>
-            </div>
-          <%# end %>
-        </div>
-      </div>
-    </div>
-</div> -->
+    </div> -->
 
 
