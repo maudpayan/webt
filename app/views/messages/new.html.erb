@@ -1,21 +1,111 @@
-
 <div class="banner-contact">
-  <div class="banner-content">
-    <div class="form-contact-md text-center">
-      <%= form_for @message, url: create_message_url do |f| %>
-        <%= notice %>
-        <%= @message.errors.full_messages.join(', ') %>
+  <div class="col-xs-12 col-sm-4 col-sm-offset-4">
 
-        <div class="form-inputs">
-          <%= f.text_field :name, required: true, placeholder: 'Your name' %>
-          <%= f.email_field :email, required: true, placeholder: 'Your email' %>
-          <%= f.text_field :company, placeholder: 'Your company' %>
-          <%= f.text_area :body, required: true, placeholder: 'Your Message' %>
-          <%= f.submit 'Send' %>
-        </div>
-      <% end %>
-    </div>
+        <%= form_for @message, url: create_message_url do |f| %>
+            <%= notice %>
+            <%= @message.errors.full_messages.join(', ') %>
+            <h2>Keep in touch</h2>
+
+            <div class="form-inputs">
+              <div class="form-group">
+                <%= f.label :name, 'Name' %>
+                <%= f.text_field :name, required: true, placeholder: '', style:"width: 100%" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :email, 'Email' %>
+                <%= f.email_field :email, required: true, placeholder: '', style:"width: 100%" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :company, 'Company' %>
+                <%= f.text_field :company, placeholder: '', style:"width: 100%" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :body, 'Message' %>
+                <%= f.text_area :body, required: true, placeholder: '...', style:"width: 100%" %>
+                <br>
+                <%= f.submit 'Send', class: "btn btn-primary" %>
+              </div>
+            </div>
+          <% end %>
+
+
   </div>
 </div>
+
+
+
+
+
+
+
+<div class="container pt-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-5" style="background-color: white; border-radius: 4px; padding: 10px; padding-bottom: 30px; margin-top: -10px">
+          <form action="#">
+            <h2 class="text-center mb-5">Keep in touch</h2>
+            <div class="form-row">
+              <div class="col-6 form-group">
+                <label for="first-name">Your first name</label>
+                <input type="text" class="form-control" id="first-name" placeholder="Bob">
+              </div>
+              <div class="col-6 form-group">
+                <label for="last-name">Your last name</label>
+                <input type="text" class="form-control" id="last-name" placeholder="Sponge">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Your email</label>
+              <input type="email" class="form-control" id="email" placeholder="bob@gmail.com">
+            </div>
+            <div class="form-group">
+              <label for="company">Your company</label>
+              <input type="text" class="form-control" id="company">
+            </div>
+            <div class="form-group">
+              <label for="body">Message</label>
+              <input type="text" class="form-control" id="body">
+            </div>
+
+            <input type="submit" value="Send your message" class="btn btn-medium btn-lg w-100">
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+<!-- <div class="banner-contact">
+    <div class="container pt-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4 contact-rectangular">
+          <%#= form_for @message, url: create_message_url do |f| %>
+            <%#= notice %>
+            <%#= @message.errors.full_messages.join(', ') %>
+            <h2 class="text-center mb-5">Keep in touch</h2>
+
+            <div class="form-inputs">
+              <div class="form-group">
+                <%#= f.label :name, 'Name' %>
+                <%#= f.text_field :name, required: true, placeholder: '' %>
+              </div>
+              <div class="form-group">
+                <%#= f.label :email, 'Email' %>
+                <%#= f.email_field :email, required: true, placeholder: '' %>
+              </div>
+              <div class="form-group">
+                <%#= f.label :company, 'Company' %>
+                <%#= f.text_field :company, placeholder: '' %>
+              </div>
+              <div class="form-group">
+                <%#= f.label :body, 'Message' %>
+                <%#= f.text_area :body, required: true, placeholder: '...' %>
+                <%#= f.submit 'Send' %>
+              </div>
+            </div>
+          <%# end %>
+        </div>
+      </div>
+    </div>
+</div> -->
 
 

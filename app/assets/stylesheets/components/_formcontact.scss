@@ -1,0 +1,39 @@
+input, textarea { display: block; }
+
+
+.new_message{
+  width: 100%;
+  text-align: left;
+}
+
+#message_name {
+  width: 100% !important;
+}
+
+#message_email {
+  width: 100%;
+}
+
+#message_company {
+  width: 100%;
+}
+
+#message_body {
+  width: 100%;
+}
+
+
+.new_message {
+    color: rgba(255,255,255,0.95);
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 60px;
+    background-color: rgba(0,0,0,0.6);
+}
+
+
+
+
+
+
